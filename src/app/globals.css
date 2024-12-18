@@ -5,6 +5,8 @@
 :root {
   --brand: #115e56;
   --brandlight: #ccfbef;
+  --gray: #667085;
+  font-size: 16px;
 }
 
 body {
