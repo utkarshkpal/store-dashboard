@@ -16,6 +16,7 @@ export default {
         brand: "var(--brand)",
         brandlight: "var(--brandlight)",
         gray: "var(--gray)",
+        secondaryBlack: "var(--secondaryBlack)",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
