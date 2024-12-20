@@ -34,7 +34,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({
         messages[messages.length - 1].sender === "Chatbot" &&
         messages[messages.length - 1].options && (
           <Options
-            options={messages[messages.length - 1].options}
+            options={messages[messages.length - 1]?.options || []}
             onSelect={onSelectOption}
           />
         )}
