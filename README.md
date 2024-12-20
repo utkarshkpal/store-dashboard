@@ -2,7 +2,7 @@
 
 This is my submission for the Wingman Frontend Engineering Coding Challenge. The project implements the provided Figma design with pixel-perfect accuracy using **React**, **Next.js**, **Shadcn**, and **Tailwind CSS**. The application is fully responsive and includes bonus features like sorting, pagination, and an interactive chat with chatbot.
 
-## 🚀 [Live Demo](https://store-dashboard-git-main-utkarsh-kandpals-projects.vercel.app/dashboard)
+## 🚀 [Live Demo](https://store-dashboard-sooty.vercel.app/dashboard)
 
 ---
 
@@ -71,7 +71,7 @@ Ensure you have the following installed:
 
 ## 📄 Deployment
 
-The app is deployed on Vercel. Access the live version here: [Live Demo](https://store-dashboard-git-main-utkarsh-kandpals-projects.vercel.app/dashboard
+The app is deployed on Vercel. Access the live version here: [Live Demo](https://store-dashboard-sooty.vercel.app/dashboard)
 
 ## 🙌 Acknowledgments
 
