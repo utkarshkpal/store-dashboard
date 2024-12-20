@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coding Challenge - Frontend Engineering Role
 
-## Getting Started
+This is my submission for the Wingman Frontend Engineering Coding Challenge. The project implements the provided Figma design with pixel-perfect accuracy using **React**, **Next.js**, **Shadcn**, and **Tailwind CSS**. The application is fully responsive and includes bonus features like sorting, pagination, and an interactive chat with chatbot.
 
-First, run the development server:
+## 🚀 [Live Demo](https://store-dashboard-git-main-utkarsh-kandpals-projects.vercel.app/dashboard)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Shadcn](https://shadcn.dev/)
+- **State Management**: React State
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📋 Features
 
-To learn more about Next.js, take a look at the following resources:
+### Core Features:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Pixel-perfect UI**: Matches the Figma design.
+2. **Responsive Design**: Works seamlessly across all screen sizes.
+3. **Reusable Components**: Modular components built with Shadcn and Tailwind CSS.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Bonus Features:
 
-## Deploy on Vercel
+1. **Sorting**: Sort table columns based on date and commission (ascending/descending).
+2. **Pagination**: Navigate through paginated data in the table.
+3. **Interactive ChatBot**: Interact with a chatbot to get answers to your questions and connect with experts.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 📦 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or later)
+- [npm](https://www.npmjs.com/)
+
+### Installation to run the project locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/utkarshkpal/store-dashboard.git
+   cd store-dashboard
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
+
+## 📚 Future Improvements
+
+- Data visualization for the graphs.(Could not complete due to time constraints)
+- Enhance chat functionality with real-time capabilities using WebSockets.
+- Add unit tests with Jest and React Testing Library.
+- Integrate a real API for mocked data.
+
+## 📄 Deployment
+
+The app is deployed on Vercel. Access the live version here: [Live Demo](https://store-dashboard-git-main-utkarsh-kandpals-projects.vercel.app/dashboard
+
+## 🙌 Acknowledgments
+
+- Open-source libraries like Next.js, Shadcn, and Tailwind CSS.
