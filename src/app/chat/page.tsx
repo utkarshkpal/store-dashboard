@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useEffect, useState } from "react";
+import DashboardNav from "../dashboard/dashboardNav";
 import ChatWindow from "./chatWindow";
 import { ChatMessage, next, reset } from "./mock";
 
@@ -59,25 +60,28 @@ const ChatApp: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100">
-      <ChatWindow messages={messages} onSelectOption={handleSelectOption} />
-      <div className="flex p-4 bg-white border-t border-gray-300">
-        <Input
-          className="flex-grow border rounded-lg p-2"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-          placeholder="Type a message..."
-        />
-        <Button
-          className="ml-2 bg-brand text-white rounded-lg px-4 py-2"
-          onClick={handleSendMessage}
-          disabled={!isExpertConnected}
-        >
-          Send
-        </Button>
+    <>
+      <DashboardNav />
+      <div className="flex flex-col h-screen bg-gray-100">
+        <ChatWindow messages={messages} onSelectOption={handleSelectOption} />
+        <div className="flex p-4 bg-white border-t border-gray-300">
+          <Input
+            className="flex-grow border rounded-lg p-2"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
+            placeholder="Type a message..."
+          />
+          <Button
+            className="ml-2 bg-brand text-white rounded-lg px-4 py-2"
+            onClick={handleSendMessage}
+            disabled={!isExpertConnected}
+          >
+            Send
+          </Button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

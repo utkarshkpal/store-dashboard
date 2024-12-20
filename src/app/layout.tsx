@@ -23,7 +23,8 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <div className="flex h-screen">
           <Navbar />
-          <div className="flex flex-col items-center justify-center h-screen">
+          <div className="border-l border-gray h-full"></div>
+          <div className="flex w-full flex-col h-screen md:ml-[60px]">
             {children}
           </div>
         </div>

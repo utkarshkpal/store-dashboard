@@ -29,6 +29,7 @@ export const columns: ColumnDef<OrderType>[] = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          className="p-0"
         >
           Date
           <ArrowUpDown className="ml-2 h-4 w-4" />
@@ -64,6 +65,7 @@ export const columns: ColumnDef<OrderType>[] = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          className="p-0"
         >
           Commission
           <ArrowUpDown className="ml-2 h-4 w-4" />
@@ -79,6 +81,11 @@ export const columns: ColumnDef<OrderType>[] = [
           )}
         </p>
       );
+    },
+    sortingFn: (rowA, rowB) => {
+      const commissionA = rowA.original.commission.value;
+      const commissionB = rowB.original.commission.value;
+      return commissionA - commissionB;
     },
   },
   {

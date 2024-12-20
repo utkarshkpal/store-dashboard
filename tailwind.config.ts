@@ -73,6 +73,9 @@ export default {
         //fontsize:32px line-height:38.4px
         xl: ["2rem", { lineHeight: "2.4rem" }],
       },
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(to right, #15B79F, #0E9382)",
+      },
     },
   },
   plugins: [tailwindcssAnimate],

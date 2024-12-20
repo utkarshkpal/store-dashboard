@@ -15,7 +15,7 @@ const NavbarItems = [
   },
   {
     name: "Group",
-    href: "/group",
+    href: "#",
     iconPath: "/icons/group.svg",
   },
   {
@@ -27,12 +27,11 @@ const NavbarItems = [
 
 const Navbar = () => {
   return (
-    <div className="flex bg-brand flex-col w-[60px] items-center px-3.5 py-6 ">
+    <div className="hidden md:flex md:fixed h-screen top-0 left-0 bg-brand flex-col w-[60px] items-center px-3.5 py-6">
       <Image src="/icons/logo.svg" alt="Logo" width={33.2} height={33.2} />
       <div className="my-8 w-full border-t border-secondaryBlack opacity-40" />
       <div className="flex w-full h-full flex-col items-center gap-[22px]">
         {NavbarItems.map((item, index) => {
-          // const isActive = item.href === "/chat";
           return (
             <Link
               className={cn(
