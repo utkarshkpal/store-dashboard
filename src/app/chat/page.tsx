@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useEffect, useState } from "react";
 import ChatWindow from "./chatWindow";
-import fetchChatBotMessage, { ChatMessage } from "./mock";
+import { ChatMessage, next, reset } from "./mock";
 
 const ChatApp: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -12,10 +12,13 @@ const ChatApp: React.FC = () => {
   const [isExpertConnected, setIsExpertConnected] = useState(false);
 
   useEffect(() => {
-    const botMessage = fetchChatBotMessage();
+    const botMessage = next();
     if (botMessage) {
       setMessages([botMessage]);
     }
+    return () => {
+      reset();
+    };
   }, []);
 
   const handleSendMessage = () => {
@@ -40,12 +43,12 @@ const ChatApp: React.FC = () => {
     };
     setMessages([...messages, newMessage]);
     setTimeout(() => {
-      const botMessage = fetchChatBotMessage();
+      const botMessage = next();
       if (botMessage) {
         setMessages((prevMessages) => [...prevMessages, botMessage]);
 
         if (botMessage?.connected) {
-          const lastMessage = fetchChatBotMessage();
+          const lastMessage = next();
           if (lastMessage) {
             setIsExpertConnected(true);
             setMessages((prevMessages) => [...prevMessages, lastMessage]);

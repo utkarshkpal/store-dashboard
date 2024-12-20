@@ -82,24 +82,22 @@ const mockChatData: ChatMessage[] = [
   },
 ];
 
-function wrapper() {
+function fetchChatBotMessage() {
   let count = -1;
-  return function () {
-    if (count >= mockChatData.length) {
-      return null;
-    }
-    count++;
-    return mockChatData[count];
+
+  return {
+    reset: () => {
+      count = -1;
+    },
+    next: () => {
+      if (count >= mockChatData.length) {
+        return null;
+      }
+      count++;
+      return mockChatData[count];
+    },
   };
 }
+const { next, reset } = fetchChatBotMessage();
 
-const fetchChatBotMessage = wrapper();
-
-// console.log(fetchChatBotMessage());
-// console.log(fetchChatBotMessage());
-
-// console.log(fetchChatBotMessage());
-
-// console.log(fetchChatBotMessage());
-
-export default fetchChatBotMessage;
+export { next, reset };
